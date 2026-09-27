@@ -2,40 +2,41 @@
 
 # Call Me Maybe
 
-Call Me Maybe is a Python project about constrained function calling with a
-small language model.
+Call Me Maybe est un projet Python consacré au *function calling* contraint
+avec un petit modèle de langage.
 
-## Python environment with uv
+## Environnement Python avec uv
 
-The project requires Python 3.12 or later and uses
-[`uv`](https://docs.astral.sh/uv/) to manage its environment and dependencies.
+Le projet nécessite Python 3.12 ou une version ultérieure. Il utilise
+[`uv`](https://docs.astral.sh/uv/) pour gérer l'environnement et les
+dépendances.
 
-Install `uv` if it is not already available:
+Installer `uv` s'il n'est pas déjà disponible :
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Create or synchronize the virtual environment from `pyproject.toml` and
-`uv.lock`:
+Créer ou synchroniser l'environnement virtuel à partir de `pyproject.toml` et
+`uv.lock` :
 
 ```bash
 uv sync
 ```
 
-Run the current project entry point inside the managed environment:
+Exécuter le point d'entrée actuel du projet dans l'environnement géré :
 
 ```bash
 uv run python -m src
 ```
 
-Activating `.venv` manually is optional. When needed, use:
+L'activation manuelle de `.venv` est facultative. Si nécessaire :
 
 ```bash
 source .venv/bin/activate
 ```
 
-To add a new dependency and update the lock file:
+Ajouter une dépendance et mettre à jour le fichier de verrouillage :
 
 ```bash
 uv add <package-name>
